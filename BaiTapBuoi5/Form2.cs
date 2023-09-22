@@ -26,7 +26,7 @@ namespace BaiTapBuoi5
 
         private void btnThemmoi_Click_1(object sender, EventArgs e)
         {
-            float diem = float.Parse(txtDtb.Text);
+            
             try
             {
                 if (txtMssv.Text == "")
@@ -39,11 +39,17 @@ namespace BaiTapBuoi5
                     MessageBox.Show("Vui lòng nhập ten sinh viên!");
                     return;
                 }
-                if (diem < 0 || diem > 10)
+                if (txtDtb.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập điểm!");
+                    return;
+                }
+                if (float.Parse(txtDtb.Text) < 0 || float.Parse(txtDtb.Text) > 10 )
                 {
                     MessageBox.Show("Điểm phải nằm trong khoảng từ 0 đến 10!");
                     return;
                 }
+                
                 if (listStudent.Where(s => s.Id == txtMssv.Text).Count() > 0)
                 {
                     throw new Exception("Mã số sinh viên đã bị trùng !");
@@ -56,23 +62,12 @@ namespace BaiTapBuoi5
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            //txtMssv.Focus(); 
+            txtMssv.Focus(); 
         }
 
         
 
-        public void kTraMssv(string maso, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = dgvStudent.Rows[e.RowIndex];
-            //foreach (DataGridViewRow itemm in dgvStudent.Rows)
-            //{
-                if (row.Cells[0].Value.ToString() == maso)
-                {
-                    MessageBox.Show("Mã số sinh viên đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-            //}
-        }
+        
         private void Form2_Load(object sender, EventArgs e)
         {
             cbKhoa.SelectedItem = "Công nghệ thông tin";

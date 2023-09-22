@@ -62,7 +62,7 @@ namespace BaiTapBuoi5
             {
                 dgvSinhvien.DataSource = null;
                 List<Student> students = new List<Student>();
-                students = listStudent.Where(s => s.Fullname.Contains(toolStripTextBox1.Text)).ToList();
+                students = listStudent.Where(s => s.Fullname.ToLower().Contains(toolStripTextBox1.Text)).ToList();
                 if (students.Count > 0)
                 {
                     dgvSinhvien.DataSource = null;

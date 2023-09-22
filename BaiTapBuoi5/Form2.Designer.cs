@@ -81,7 +81,7 @@
             this.txtMssv.Location = new System.Drawing.Point(210, 56);
             this.txtMssv.Name = "txtMssv";
             this.txtMssv.Size = new System.Drawing.Size(243, 22);
-            this.txtMssv.TabIndex = 1;
+            this.txtMssv.TabIndex = 0;
             // 
             // txtName
             // 
@@ -95,7 +95,7 @@
             this.txtDtb.Location = new System.Drawing.Point(210, 221);
             this.txtDtb.Name = "txtDtb";
             this.txtDtb.Size = new System.Drawing.Size(100, 22);
-            this.txtDtb.TabIndex = 1;
+            this.txtDtb.TabIndex = 3;
             // 
             // cbKhoa
             // 
@@ -114,7 +114,7 @@
             this.btnThemmoi.Location = new System.Drawing.Point(339, 293);
             this.btnThemmoi.Name = "btnThemmoi";
             this.btnThemmoi.Size = new System.Drawing.Size(98, 33);
-            this.btnThemmoi.TabIndex = 3;
+            this.btnThemmoi.TabIndex = 4;
             this.btnThemmoi.Text = "Thêm mới";
             this.btnThemmoi.UseVisualStyleBackColor = true;
             this.btnThemmoi.Click += new System.EventHandler(this.btnThemmoi_Click_1);
@@ -124,7 +124,7 @@
             this.btnThoat.Location = new System.Drawing.Point(443, 293);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(88, 33);
-            this.btnThoat.TabIndex = 3;
+            this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -145,7 +145,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
-            this.Text = "Thêm sinh viên";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
